@@ -1,6 +1,12 @@
 <ion-content [fullscreen]="true">
 
-    
+    <h1>{{ this.titulo }}</h1>
+    <h3>{{ this.subtitulo }}</h3>
+
+    <ng-container *ngFor="let aluno of this.alunos">
+        <h2>Nome do Aluno: {{ aluno.nome }}</h2>
+        <h2>Email do aluno:{{ aluno.email }}</h2>
+    </ng-container>
 
 </ion-content>
 

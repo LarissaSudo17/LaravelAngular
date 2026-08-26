@@ -18,10 +18,21 @@ export class HomePage {
   ];
 
   titulo:string = 'listagem de alunos';
-  subtitulo: string = 'sistema integrado de gestão'
+  subtitulo: string = 'sistema integrado de gestão';
 
-constructor (){
+  constructor(){
+    fetch('https//127.0.0.1:8000/aluno/index')
+    .then(resp => resp.json())
+    .them(resp => {
+      this.alunos = resp
+    })
+    .catch(erro => {
+      console.log(erro)
+    })
+    .finally(() =>{
+      console.log("requisição finalizada!")
+    })
+  }
 
-}
 
 }
