@@ -12,8 +12,8 @@ import { Router } from '@angular/router';
 })
 export class HomePage {
 
-  alunos = any[
-    {nome:'trompete gordo', email:'gordaodaxj@gmail.com'}
+  alunos: any = [
+    {nome:'trompete gordo', email:'gordaodaxj@gmail.com'};
     {nome:'vitor moggado', email:'moggadinho@gmail.com'}
   ];
 
