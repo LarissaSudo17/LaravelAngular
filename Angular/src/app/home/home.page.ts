@@ -12,17 +12,16 @@ import { Router } from '@angular/router';
 })
 export class HomePage {
 
-  pokemon:any = {
-    nome: null,
-    poder: null
-  };
+  alunos = any[
+    {nome:'trompete gordo', email:'gordaodaxj@gmail.com'}
+    {nome:'vitor moggado', email:'moggadinho@gmail.com'}
+  ];
 
-  constructor( 
-    public crudService: CrudService
-  ){ }
+  titulo:string = 'listagem de alunos';
+  subtitulo: string = 'sistema integrado de gestão'
 
-  enviar() {
-    this.crudService.insert(this.pokemon, 'pokemons');
-  }
+constructor (){
+
+}
 
 }
