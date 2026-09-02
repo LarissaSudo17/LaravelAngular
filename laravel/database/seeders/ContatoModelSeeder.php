@@ -2,10 +2,10 @@
 
 namespace Database\Seeders;
 
-use App\Models\ContatoModel;
+
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-
+use App\Models\ContatoModel;
 
 class ContatoModelSeeder extends Seeder
 {
@@ -14,9 +14,6 @@ class ContatoModelSeeder extends Seeder
      */
     public function run(): void
     {
-       $contato= new ContatoModel();
-       $contato->nome = "Larissa";
-       $contato->email = "sudolarissa@gmail.com";
-       $contato->save();
+    ContatoModel::factory()->count(100)->create();
     }
 }
