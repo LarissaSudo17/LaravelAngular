@@ -22,6 +22,6 @@ Route::prefix('/aluno')->group(function(){
 	Route::post('/edit', [App\Http\Controllers\AlunoController::class, 'edit'])->name('aluno.edit');
 	Route::post('/update', [App\Http\Controllers\AlunoController::class, 'update'])->name('aluno.update');
     Route::post('/destroy', [App\Http\Controllers\AlunoController::class, 'destroy'])->name('aluno.destroy');
-    Route::get('/contato',[App\Http\Controllers\ContatoController::class, 'controller'])->name('aluno.index');
+    Route::get('/contato',[App\Http\Controllers\ContatoController::class, 'contato'])->middleware('aluno.index');
 }); 
 
