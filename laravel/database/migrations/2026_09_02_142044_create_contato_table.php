@@ -22,6 +22,13 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('contato');
+        Schema::create('contato', function(Blueprint $table){
+            $table->id();
+            $table->timestamps();
+            $table->string("nome",255);
+            $table->string("email",255);
+            
+
+        });
     }
 };
